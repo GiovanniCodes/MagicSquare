@@ -64,27 +64,7 @@ vector< vector<int> >holdV(int s) {
 	// Matrix Values
 	return matrix;
 }
-//USed to create MAgic Square
-vector< vector<int> > straightMagic(int size) {
-	int v = 0;
-	vector< vector<int> >matrix;
 
-	for (int i = 0; i < size; i++) {
-		vector<int> row;
-		for (int j = 0; j < size; j++) {
-
-			v = (((i + j + 1 + (size / 2)) % size) + ((i + 2 * j + 1) % size) + 1);
-
-			row.push_back(v);
-
-		}
-		matrix.push_back(row);
-
-
-	}
-
-	return matrix;
-}
 //Sum of Rows
 void rowSum(int s, vector< vector<int> > m) {
 	vector< vector<int> > matrix = m;
@@ -320,7 +300,7 @@ int main() {
 
 	if (odder(n) == 1) {
 
-		straightMagic(n);
+		
 		vector< vector<int> > m = holdV(n);
 
 		flipit(n, m);
